@@ -70,7 +70,13 @@ cd runner-user
 mvn test
 ```
 
-TestNG configuration is in `runner-user/src/test/resources/testng.xml`. Uncomment or add classes to run specific tests.
+TestNG configuration is in `runner-user/src/test/resources/testng/api-tests.xml` by default. To run mobile tests, execute the following command:
+
+```powershell
+cd runner-user
+mvn test -Dtestng-tests=mobile
+```
+
 
 ## Module Overview
 
