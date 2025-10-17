@@ -1,9 +1,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite" parallel="methods" thread-count="1">
-    <test name="BasicTest">
+    <test name="MobileTests">
         <classes>
-<!--            <class name="tests.mobile.LoginTest"/>-->
-            <class name="tests.api.PetStoreTest"/>
+            <class name="tests.mobile.LoginTest"/>
         </classes>
     </test>
 </suite>
