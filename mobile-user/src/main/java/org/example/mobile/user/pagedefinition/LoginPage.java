@@ -1,9 +1,9 @@
 package org.example.mobile.user.pagedefinition;
 
-import org.example.mobile.user.base.BasePage;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import org.example.mobile.user.base.BasePage;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
@@ -19,6 +19,10 @@ public class LoginPage extends BasePage {
     @AndroidFindBy(accessibility  = "test-LOGIN")
     @iOSXCUITFindBy(accessibility = "Login button")
     WebElement loginButton;
+
+    @AndroidFindBy(accessibility = "test-Error message")
+    @iOSXCUITFindBy(accessibility = "Error message")
+    WebElement  errorMessage;
 
     public LoginPage(AppiumDriver driver) {
         super(driver);
@@ -40,6 +44,10 @@ public class LoginPage extends BasePage {
         this.enterUserName(username);
         this.enterPassword(password);
         this.clickLoginButton();
+    }
+
+    public boolean isErrorMessageDisplayed() {
+        return this.errorMessage.isDisplayed();
     }
 
 }

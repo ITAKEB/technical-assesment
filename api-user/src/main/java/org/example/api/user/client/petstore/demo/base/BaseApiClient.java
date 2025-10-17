@@ -15,7 +15,6 @@ public class BaseApiClient {
 //                .log().all(); // logging the request
     }
 
-    // Métodos utilitarios
     protected Response get(String endpoint) {
         return request.when().get(endpoint).then().log().all().extract().response();
     }
