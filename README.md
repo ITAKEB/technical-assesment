@@ -29,7 +29,9 @@ runner-user/
     utils/        # Utilities (if any)
   src/test/resources/
     config.properties # Test configuration
-    testng.xml       # TestNG suite configuration
+    testng/
+      mobile-tests.xml  # TestNG suite configuration for mobile
+      api-tests.xml     # TestNG suite configuration for api
 ```
 
 ## Technologies Used
